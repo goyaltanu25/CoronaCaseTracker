@@ -1,0 +1,84 @@
+<div [class.alternative]="otherTheme" class="container-fluid"> 
+
+  <mat-toolbar class="toolbar" color="warn">
+    <mat-toolbar-row>
+    <span><img src="assets/stay_safe.jpg" alt="Stay Safe Image" style="margin-left:17%"></span>
+    <span style="margin-left:5%;">
+      <h2>Stay Home , Stay Safe !!</h2>
+    </span>
+    <div class="example-button-container">
+      <button mat-fab color="accent" aria-label="Example icon button with a home icon" data-toggle="modal" data-target="#exampleModal">
+        <mat-icon>home</mat-icon>
+      </button>
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                
+                <h5 class="modal-title" id="exampleModalLabel">Contact Form</h5>
+                    
+               
+              </div>
+              <div class="modal-body">
+                  <mat-form-field appearance="fill">
+                      <mat-label>Name</mat-label>
+                      <input matInput>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Phone number</mat-label>
+                        <example-tel-input required></example-tel-input>
+                        <mat-icon matSuffix>phone</mat-icon>
+                        <mat-hint>Include area code</mat-hint>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field appearance="fill">
+                      <mat-label>Comments</mat-label>
+                      <textarea matInput></textarea>
+                    </mat-form-field>
+                  
+              </div>
+              <div class="modal-footer">
+                <button  mat-raised-button color="primary"  data-dismiss="modal">Close</button>
+                <button  mat-raised-button color="primary">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    </mat-toolbar-row>
+  </mat-toolbar> 
+
+  <mat-slide-toggle 
+      class="example-margin" 
+      [color]="color" 
+      (click)="changeTheme()">Toggle Theme!
+  </mat-slide-toggle>
+  <div class="row">
+    <div class="col-xs-12 col-md-3"  *ngFor="let data of final">
+    <!--card - material-->
+       <mat-card class="card">
+          <mat-card-header>
+            <mat-card-title>{{data.state}}</mat-card-title>
+          </mat-card-header>
+          <img mat-card-img class="img" src={{data.src}} alt="{{data.src}}">
+          <mat-card-content>
+            <p class="active_cases">
+              Active Cases : {{data.active}}
+            </p>
+            <p>Total Cases : {{data.confirmed}}</p>
+            <p class="deaths">Total Deaths : {{data.deaths}}</p>
+            <p>Total Recovered Cases : {{data.recovered}} </p>
+            <p class="date">Data true as of : {{data.lastupdatedtime}}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+  </div>
+  
+ 
+  <mat-toolbar class="footerToolBar" color="primary">
+    <mat-toolbar-row>
+      
+    </mat-toolbar-row>
+  </mat-toolbar> 
+</div>

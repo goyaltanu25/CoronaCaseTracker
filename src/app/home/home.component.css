@@ -1,0 +1,64 @@
+.toolbar{
+    margin: 3% 0;
+}
+.footerToolBar .mat-toolbar-row{
+    height: inherit;
+}
+.modal-content{
+    color:#00695c
+}
+.modal-header,
+.modal-footer{
+    border: none;
+}
+.mat-form-field{
+    width: 100%;
+    font-size: 15px;
+}
+.container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    overflow-x: auto;
+}
+/* card - material */
+.mat-card-title{
+   color:brown   
+   
+  }
+.deaths{
+      color:red
+  }
+.active_cases{
+      color:green
+  }
+.date{
+      color:blue
+  }
+.card{
+    display: inline-block;
+    height: 450px;
+    width: 300px;
+    padding: 8px; 
+    margin: 10px; 
+    text-align: center;
+}
+.img{
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.example-margin {
+    margin: 0 84%;
+}
+
+.example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+    margin-left: 45%;
+  }
